@@ -1,0 +1,54 @@
+<div ng-controller="Display" ng-init="submit()">
+
+
+    <style>
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            color:black;
+        }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            text-align: center;
+        }
+        td {
+            text-align: center;
+        }
+        table {
+            border-spacing: 15px;
+        }
+        table#t01 {
+            width:100%;
+            background-color: #f4ffc0;
+        }
+    </style>
+<input type="text" ng-model="test">
+
+    <table id="t01" border="2px solid">
+
+<p>Inventory Details Display </p>
+        <br>
+        <tr>
+
+            <th>Product Name</th>
+            <th>Measuring Unit</th>
+            <th>Initial Quantity</th>
+            <th>Present Quantity</th>
+            <th>Product Cost</th>
+
+        </tr>
+
+        <tr ng-repeat="item in name | filter:test"  >
+            <td>{{item.pName}}
+            <td>{{item.unit}}
+            <td>{{item.initCount}}
+            <td>{{item.pCount}}
+            <td>{{item.pCost}}
+
+
+        </tr>
+    </table>
+</div>

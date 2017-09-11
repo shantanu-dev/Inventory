@@ -1,0 +1,61 @@
+<div ng-controller="Update">
+    <form ng-submit="submit()">
+        Product Name: <input type="text" ng-model="pName">
+        <br>
+        <br>
+        Product Quantity:<input type="number" ng-model="pCount">
+        <br>
+        <br>
+        <button  type="submit">submit</button>
+    </form>
+
+    <style>
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            color:black;
+        }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            text-align: center;
+        }
+        td {
+            text-align: center;
+        }
+        table {
+            border-spacing: 15px;
+        }
+        table#t01 {
+            width:100%;
+            background-color: #f4ffc0;
+        }
+    </style>
+
+    <br>
+    <br>
+
+    <table id="t01" border="2px solid">
+
+
+        <tr>
+
+            <th>Product Name</th>
+            <th>Measuring Unit</th>
+            <th>Initial Quantity</th>
+            <th>Present Quantity</th>
+            <th>Product Cost</th>
+        </tr>
+
+        <tr >
+            <td>{{name.pName}}
+            <td>{{name.unit}}
+            <td>{{name.initCount}}
+            <td>{{name.pCount}}
+            <td>{{name.pCost}}
+
+        </tr>
+    </table>
+</div>

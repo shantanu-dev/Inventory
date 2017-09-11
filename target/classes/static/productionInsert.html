@@ -1,0 +1,37 @@
+<div ng-controller="ProductInsert">
+
+    <form  >
+        <p>  Please fill the Production details </p>
+        Product Name: <input type="text" ng-model="productName">
+        <br>        <br>
+
+        Production Quantity:<input type="number" min="1" ng-model="productionQuantity">
+        <br>        <br>
+
+        <div ng-repeat="field in raw.pname track by $index"> <br>
+            <!--Product Raw Material : &nbsp;&nbsp;&nbsp; <input  type='text' ng-model='raw.pname[$index]' placeholder='Product Name'>-->
+
+            Product Raw Material: <select id="Id" name="pName" ng-model='raw.pname[$index]' >
+                <option  ng-repeat="z in menu"  value="{{z.pName}}">{{z.pName}}</option>
+            </select>
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            Quantity : &nbsp;&nbsp;&nbsp;<input  type='number' min="1" ng-model='raw.pquantity[$index]' placeholder='Product Quantity:'>
+            <br>
+        </div>
+        <br>
+
+        <button ng-click="addFormField()">Add</button> <br>
+        <br>
+        <button  ng-click="submit()">submit</button>
+
+
+    </form>
+
+</div>
+
+
+
+

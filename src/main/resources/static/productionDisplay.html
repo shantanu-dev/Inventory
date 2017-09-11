@@ -1,0 +1,39 @@
+<div ng-controller="ProductionDisplay" ng-init="submit()">
+
+
+
+        <div ng-repeat="item in name" >
+            Production ID :  <td>{{item.productionId}}
+            <br>
+           Product Name : <td>{{item.productName}}
+            <br>
+           Production Date :<td>{{item.productionDate}}
+          <br>
+            Production Quality:  <td>{{item.productionQuantity}}
+<br>
+
+            <table>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Quantity</th>
+                </tr>
+
+                <br>
+                <tbody ng-repeat="hi in item.raws">
+
+                <tr>
+                    <td>{{hi.pName}}
+                    <td>{{hi.pCount}}
+                </tr>
+
+
+
+
+                </tbody>
+            </table>
+
+            <br>
+            <br>
+            <br>
+        </div>
+</div>

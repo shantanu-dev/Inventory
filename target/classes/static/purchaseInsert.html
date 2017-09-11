@@ -1,0 +1,43 @@
+<div ng-controller="PurchaseInsert" >
+
+    <form  >
+        <p>  Please fill the Purchase details </p>
+        Vendor Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="vendorName">
+        <br>        <br>
+
+        Tax Value:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" ng-model="tax">
+        <br>        <br>
+
+<div ng-repeat="field in table.pname track by $index">
+
+        <!--Item Name &nbsp;&nbsp;&nbsp;&nbsp;<input  type='text' ng-model='table.pname[$index]' placeholder='Product Name'>-->
+
+
+    Item Name: <select id="Id" name="pName" ng-model='table.pname[$index]'   >
+    <option ng-repeat="a in menu" name="{{a.pName}}">{{a.pName}}</option>
+</select>
+
+
+    Quantity&nbsp;&nbsp;&nbsp;&nbsp;<input  type='number' min="1" ng-model='table.pquantity[$index]' placeholder='Product Quantity:'>
+
+        Cost&nbsp;&nbsp;&nbsp;&nbsp;<input  type='number' min="1" ng-model='table.pcost[$index]' placeholder='Product Cost:'>
+    <br>
+<br>
+
+</div>
+
+        <br>
+        <br>
+    <button ng-click="addFormField()">Click To add your order</button>
+
+    <button  ng-click="submit()">submit</button>
+
+
+    </form>
+
+</div>
+
+
+
+
+

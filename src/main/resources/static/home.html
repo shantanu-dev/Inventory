@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <script src="/webjars/angularjs/1.4.9/angular.js"></script>
+    <script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
+    <script src="/webjars/angularjs/1.4.9/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="Controller.js"></script>
+
+
+
+    <style>
+        #header {
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:3px;
+        }
+        #nav {
+            line-height:30px;
+            background-color:#eeeeee;
+            height:1000px;
+            width:200px;
+            float:left;
+            padding:5px;
+        }
+
+        #aside {
+            line-height:30px;
+            background-color:#eeeeee;
+            height:1000px;
+            width:200px;
+            float:right;
+            padding:5px;
+        }
+        #fav {
+            line-height:30px;
+            background-color:#eeeeee;
+            height:1000px;
+            width:100px;
+            float:right;
+            padding:5px;
+        }
+
+        #section {
+           height:1000px;
+            float:left;
+            padding:20px;
+        }
+        #footer {
+            bottom: auto;
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:10px;
+        }
+    </style>
+    <style>
+        input[type=submit] {
+            width: 100%;
+            background-color: #080446;
+            color: white;
+            padding: 5px 5px;
+            margin: 0 0;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body >
+
+
+<div ng-app="myapp">
+<div id="header" >
+    <h1> Inventory Details</h1>
+
+    <div>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
+
+</div>
+
+
+<div id="nav" class="home-section">
+    <h2>Inventory</h2>
+    <ul class="menu-list">
+        <li><a href="#Add">Add Record</a></li>
+        <li><a href="#Delete">Delete Record</a></li>
+        <!--<li><a href="#Search">Search Record</a></li>-->
+        <li><a href="#Display">Display Records</a> </li>
+        <!--<li><a href="#Update">Update Quantity</a></li>-->
+    </ul>
+
+    <h2>User Table</h2>
+    <ul class="menu-list">
+        <li><a href="#UserInsert">Register User</a></li>
+        <li><a href="#RolesDisplay">Display Roles</a></li>
+
+    </ul>
+</div>
+
+
+<div id="aside" class="home-section">
+   <div>
+       <ul class="menu-list">
+           <h2>Purchase</h2>
+           <li><a href="#PurchaseInsert">Purchase Product</a></li>
+           <li><a href="#PDisplay">Show Purchases</a> </li>
+           </ul>
+   </div>
+
+
+    <div>
+        <ul class="menu-list">
+            <h2>Production</h2>
+
+            <li><a href="#ProductInsert">Insert Production</a> </li>
+            <li><a href="#ProductionDisplay">Display Production</a> </li>
+</ul>
+    </div>
+
+
+</div>
+
+
+
+<div id="section" ng-view="">
+</div>
+
+
+</div>
+</body>
+</html>

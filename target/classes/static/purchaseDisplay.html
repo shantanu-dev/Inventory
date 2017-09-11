@@ -1,0 +1,47 @@
+<div ng-controller="PDisplay" ng-init="submit()">
+
+
+
+    <p>Purchase Details Display </p>
+
+
+
+<div ng-repeat="item in name">
+      Purchase Id :   {{item.purchaseId}}   <br>
+       Vendor Name :  {{item.vendorName}}<br>
+       Purchase Date : {{item.purchaseDate}}<br>
+        Purchase Cost: {{item.purchaseCost}}<br>
+       Total Cost :  {{item.totalCost}}<br>
+      Tax :   {{item.tax}}<br>
+<table>
+
+    <tr>
+        <th>Product Name</th>
+        <th>Product Quantity</th>
+    </tr>
+
+   <br>
+<tbody ng-repeat="asd in item.purchases">
+
+<tr>
+    <td>{{asd.pName}}
+    <td>{{asd.pCount}}</td>
+</tr>
+
+
+
+
+</tbody>
+</table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</div>
+</div>
+
+
+
